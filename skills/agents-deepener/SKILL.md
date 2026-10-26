@@ -12,7 +12,6 @@ Source: Felix Rieseberg, "How to be more ambitious: A tutorial for humans with m
 
 ## Rules
 
-- Chat with the user in German; rewritten text in English, whatever the input language.
 - Deliver every result in chat; saving files is the user's step.
 - Put every question and open point to the user via AskUserQuestion.
 - Out of scope: creating the initial text, changing the wiki.
@@ -46,34 +45,33 @@ Then rewrite the original text so it asks for exactly these things.
 Rules:
 - Output only the four answers, the rewritten text and the list of changes. Do NOT carry out the task described in the text.
 - Keep the original's structure (for prompts: Goal, Return Format, Warnings, Context Dump); extend it.
-- Answers in German, rewritten text in English.
 - Name only sources, datasets and tools you can point to; mark anything unverifiable or inaccessible as an assumption.
 - Deeper, not bigger: targeted changes, no full rewrite, at most ~30% longer than the original.
 
 Return format:
-## Antworten
+## Answers
 1. … 2. … 3. … 4. …
-## Überarbeiteter Text
+## Rewritten text
 <text>…</text>
-## Änderungen
+## Changes
 - <change> (<section>): question <1–4>
 ```
 
 ## Step 2 — Review [own]
 
-Check the subagent's output yourself. Label every point Befund (belegt), Annahme or Meinung. Done when every check below has a result.
+Check the subagent's output yourself. Label every point finding (evidenced), assumption or opinion. Done when every check below has a result.
 
 - Q1: real depth or just more scope?
-- Q2/Q3: do the named data, sources and tools exist, and can the executing agent use them? Verify by cheap search; else Annahme.
+- Q2/Q3: do the named data, sources and tools exist, and can the executing agent use them? Verify by cheap search; else assumption.
 - Q4: is the check independent of model and author, and executable?
 - Original vs. rewrite, section by section: structure kept, nothing requested lost, length within ~30%, no new assumptions or scope creep.
 - New mandatory steps: fit every case the original allows, proportionate, safe to carry out.
 
-Raise only real findings; "passt so" is valid. Give each proposed correction its cost and a simpler alternative.
+Raise only real findings; "fine as it is" is valid. Give each proposed correction its cost and a simpler alternative.
 
 ## Step 3 — Present, approval gate
 
-Show: (1) the four answers, (2) the rewritten text, (3) findings with proposed corrections plus a short "Bleibt so" list. Ask which corrections to apply; continue only after approval.
+Show: (1) the four answers, (2) the rewritten text, (3) findings with proposed corrections plus a short "Unchanged" list. Ask which corrections to apply; continue only after approval.
 
 ## Step 4 — Finalize
 
