@@ -33,6 +33,8 @@ Every open question goes through the AskUserQuestion tool, one question per topi
 
 Scope: <what is in; what is explicitly out; what happens with anything noticed outside scope (report as observation, do not fix).>
 
+Limit: <time, runs or size>. When reached, stop and report what exists.
+
 ## Steps
 
 1. **<Verb>.** <What to do, with what input, what it produces.>
@@ -78,7 +80,8 @@ Rules for the template:
 
 ## Guiding questions (ask only if not derivable)
 
-- **Goal:** task in one sentence (verb + object); resulting artifact and location; checkable success criterion; constraints; explicitly out of scope; inputs and where they live.
+- **Goal:** task in one sentence (verb + object); resulting artifact and location; checkable success criterion, phrased as a result someone can run, open or show; upper limit (time, runs or size); constraints; explicitly out of scope; inputs and where they live.
+- **Result check:** if the goal is only process work (rules, roles, hooks, guards, templates), ask which result it unblocks. If it unblocks none, propose a result instead.
 - **Steps:** which steps, which are read-only, where to stop for approval, what is delegated and to which model.
 - **Return Format:** content and order; form (table, list, file); language and length; one or several options and ranking; reasons and uncertainty; stop points; separate list of assumptions.
 - **Warnings:** forbidden actions; irreversible actions; money, rights, sensitive data; behaviour under doubt; whether limits are technically enforced or only stated in the prompt.
